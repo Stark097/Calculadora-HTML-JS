@@ -27,7 +27,29 @@
 
       var op1 = document.getElementById("op1").value;
       var op2 = document.getElementById("op2").value;
-      
+
+      //si se ingresaron los 2 valores en los input entran en los casos conrrespondientes
+        switch(op) {
+            case 'sumar':
+                var resultado = ops.sumar(op1, op2);
+                 document.calculadora.resultado.value = resultado;
+                break;
+            case 'restar':
+                var resultado = ops.restar(op1, op2);
+               document.calculadora.resultado.value = resultado;
+                break;
+            case 'multiplicar':
+                var resultado = ops.multiplicar(op1, op2);
+              document.calculadora.resultado.value = resultado;
+                break;
+            case 'dividir':
+                var resultado = ops.dividir(op1, op2);
+               document.calculadora.resultado.value = resultado;
+                break;
+
+        }
+}
+
 	</script>
 
 
