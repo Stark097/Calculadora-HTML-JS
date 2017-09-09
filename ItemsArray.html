@@ -1,0 +1,58 @@
+<html>
+<head>
+	<title>Items a un Array</title>
+
+	<script type="text/javascript">
+
+     var arreglo = new Array();
+  
+		
+		function ingresar(){
+		var valor1 = document.Formulario.n1.value;
+		var valor2=document.Formulario.n2.value;
+		
+		var valor3=valor1+" = "+valor2
+		arreglo.push(valor3)
+				
+		
+		}
+
+		function mostrar(){
+		
+		for (i=0; i<arreglo.length; i++)
+		{
+	                 
+              
+             document.getElementById('mostrar1').innerHTML += "  <br> "+arreglo[i] 
+           
+                                  
+        }		    
+	}
+
+	</script>
+</head>
+<body>
+
+    <form name="Formulario">
+
+    	<label>Nombre: </label>
+		<input type="text" name="n1"/>
+		<br>
+		<label>Valor: </label>
+		<input type="number" name="n2"/>
+		<br>
+
+    	
+		<input type="button" value="Agregar" onClick="ingresar();"/>
+		<button onclick="mostrar()" type="button">Mostrar</button>
+	   <br>
+	   <br>
+        <label>Resultado</label>
+        
+        <div id="mostrar1"></div> 
+        
+
+</form>
+    
+</body>
+</html>
